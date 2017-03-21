@@ -23,7 +23,7 @@ public class Main {
 
 		testList.removeElement(6);
 		testList.removeElement(3);
-		testList.addToTail(666);
+		testList.addToTail(56);
 		testList.removeElement(14);
 		
 		testList.printLinkedList();

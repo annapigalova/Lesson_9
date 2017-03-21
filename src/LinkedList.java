@@ -6,32 +6,32 @@ public class LinkedList<T> {
 	private int size = 0;
 
 	public void addToHead(T item) {
-		Element<T> a = new Element<T>();
-		a.item = item;
+		Element<T> j = new Element<T>();
+		j.item = item;
 
 		if (head == null) {
 
-			head = a;
-			tail = a;
+			head = j;
+			tail = j;
 
 		} else {
-			a.next = head;
-			head = a;
+			j.next = head;
+			head = j;
 		}
 		size += 1;
 
 	}
 
 	public void addToTail(T item) {
-		Element<T> a = new Element<T>();
-		a.item = item;
+		Element<T> j = new Element<T>();
+		j.item = item;
 
 		if (tail == null) {
-			head = a;
-			tail = a;
+			head = j;
+			tail = j;
 		} else {
-			tail.next = a;
-			tail = a;
+			tail.next = j;
+			tail = j;
 		}
 		size += 1;
 	}
@@ -50,11 +50,11 @@ public class LinkedList<T> {
 			for (int i = 0; i < position - 1; i++) {
 				node = node.next;
 			}
-			Element<T> a = new Element<T>();
-			a.item = item;
+			Element<T> j = new Element<T>();
+			j.item = item;
 
-			a.next = node.next; // define next value of the inserted element
-			node.next = a; // inserted element
+			j.next = node.next; // define next value of the inserted element
+			node.next = j; // inserted element
 
 			size += 1;
 		}
@@ -108,11 +108,11 @@ public class LinkedList<T> {
 
 	public boolean containElement(T item) {
 		Element<T> node = head;
-		Element<T> a = new Element<T>();
-		a.item = item;
+		Element<T> j = new Element<T>();
+		j.item = item;
 
 		while (node != null) {
-			if (a.item.equals(node.item)) {
+			if (j.item.equals(node.item)) {
 				return true;
 			}
 			node = node.next;
