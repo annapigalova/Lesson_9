@@ -2,15 +2,31 @@
 public class Main {
 
 	public static void main(String[] args) {
-		LinkedList<Integer> ml = new LinkedList<>();
-		ml.addToTail(1);
-		ml.addToHead(2);
-		ml.addToHead(6);
-		ml.addToTail(3);
-		ml.addToHead(45);
-		ml.addToPos(14, 2);
+		LinkedList<Integer> testList = new LinkedList<>();
 
-		ml.printLinkedList();
+		testList.addToTail(1);
+		testList.addToHead(2);
+		testList.addToHead(6);
+		testList.addToTail(3);
+		testList.addToHead(45);
+		testList.addToPos(14, 2);
+		testList.addToHead(6);
+		
+		testList.printLinkedList();
+		System.out.println();
+		
+		if (testList.containElement(21)) {
+			System.out.println("Element exists");
+		} else {
+			System.out.println("Element doesn't exists");
+		}
+
+		testList.removeElement(6);
+		testList.removeElement(3);
+		testList.addToTail(666);
+		testList.removeElement(14);
+		
+		testList.printLinkedList();
 		System.out.println();
 	}
 
